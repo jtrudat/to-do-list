@@ -14,7 +14,7 @@ app.use(bodyParser.json())
 app.use('/todos', router)
 
 
-//DATABASE CONNECTION AND SERVER PORT
+//ATLAS DATABASE CONNECTION AND SERVER PORT
 mongoose.connect('mongodb+srv://trudat:passwordpassword@cluster0.5rud2jy.mongodb.net/todolist?retryWrites=true&w=majority')
 .then(()=>{
     app.listen(4001)

@@ -6,8 +6,8 @@ const Item = require('../models/item.js')
 //CREATE
 router.post('/', (req, res)=>{
     const createdItem ={
-        title : req.body.title,
-        description : req.body.description
+        todoitem : req.body.todoitem,
+        date : req.body.date
     }
     new Item(createdItem)
     .save()
@@ -24,9 +24,22 @@ router.get('/', (req, res)=>{
 })
 
 //UPDATE
+router.put('/:id', (req, res)=>{
+    Item.findByIdAndUpdate(req.params.id, req.body)
+    .then((updatedItem)=>{
+        console.log('item updated')
+        res.json(updatedItem)
+    })
+})
 
 //DELETE
-
+router.delete('/:id', (req, res)=>{
+    Item.findByIdAndDelete(req.params.id)
+    .then((deletedItem)=>{
+        console.log('item successfully deleted')
+        res.json(deletedItem)
+    })
+})
 
 //EXPORT
 module.exports = router

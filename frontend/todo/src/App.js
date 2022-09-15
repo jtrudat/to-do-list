@@ -5,7 +5,7 @@ import { ListItems } from './components/ListItems'
 function App() {
   return (
     <div>
-      Things to do
+      <div>Things to do</div>
       <Input/>
       <ListItems />
     </div>
