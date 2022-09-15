@@ -4,8 +4,8 @@ const { Schema } = mongoose
 
 //SCHEMA PARAMETERS FOR EACH NEW MODEL ITEM
 const itemSchema = new Schema({
-    todoitem: String,
-    date : Number,
+    todoItem: String,
+    date : String,
     });
 
 //EXPORT AND MODEL COLLECTION WILL BE KNOWN AS items IN MONGODB

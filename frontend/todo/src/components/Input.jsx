@@ -7,9 +7,10 @@ export const Input = ()=>{
     let submitHandler = (evt)=>{
         evt.preventDefault()
         let newItem = {
-            todoitem : itemName,
+            todoItem : itemName,
             date : enteredDate
         }
+        
     }   
 
     let itemChangeHandler = (evt)=>{

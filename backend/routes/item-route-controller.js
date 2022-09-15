@@ -6,7 +6,7 @@ const Item = require('../models/item.js')
 //CREATE
 router.post('/', (req, res)=>{
     const createdItem ={
-        todoitem : req.body.todoitem,
+        todoItem : req.body.todoItem,
         date : req.body.date
     }
     new Item(createdItem)
