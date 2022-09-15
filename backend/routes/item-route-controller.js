@@ -1,10 +1,9 @@
+//DEPENDENCIES
 const express = require('express')
-
 const router = express.Router()
-
 const Item = require('../models/item.js')
 
-
+//CREATE
 router.post('/', (req, res)=>{
     const createdItem ={
         title : req.body.title,
@@ -15,6 +14,7 @@ router.post('/', (req, res)=>{
     res.status(201).json(createdItem)
 })
 
+//READ
 router.get('/', (req, res)=>{
     console.log('queried all database docs')
     Item.find()
@@ -23,4 +23,10 @@ router.get('/', (req, res)=>{
     })
 })
 
+//UPDATE
+
+//DELETE
+
+
+//EXPORT
 module.exports = router
