@@ -1,8 +1,15 @@
-.lineitem {
-    display: inline;
+#lineitem {
+    display: inline
    
 }
 
-button{
+button {
+    padding: 4px;
+    display: inline;
+    margin: 5px
+}
+
+h5{
+    display: inline-flex;
     padding: 5px
 }

@@ -14,11 +14,11 @@ const deleteHandler = ()=>{
     return(
         <div>
             
-            <div className="lineitem">
-                <h3>{props.todoItem}</h3>
-                <h3>{props.date}</h3>
+            <div>
+                <h5>{props.todoItem}</h5>
+                <h5>{props.date}</h5>
                 <button onClick={editHandler}>Edit</button>
-                <button  onClick={deleteHandler}>Delete</button>
+                <button onClick={deleteHandler}>Delete</button>
             </div>
         </div>
     )

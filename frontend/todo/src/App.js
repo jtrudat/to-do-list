@@ -30,8 +30,9 @@ function App() {
   //   })
   // }
   return (
-    <div className="setup">
+    <div className="setDisplay">
       <div>Things to do</div>
+      <br></br>
       <Input />
       <ListItems taskers={itemsList}/>
     </div>

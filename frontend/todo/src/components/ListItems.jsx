@@ -27,10 +27,12 @@ export const ListItems = (props)=>{
         <div>
             <br></br>
             <br></br>
+            
+
+            <label id="listingSection">Consolidated list of items to do</label>
             <button onClick={refreshHandler}>refresh current listings</button>
-            <br></br>
-            <label>Consolidated list of items to do</label>
-            {allItems.map((dbData)=>{
+            <div id="linerow">
+                {allItems.map((dbData)=>{
                  return (<EachItem 
                     todoItem = {dbData.todoItem}
                     date = {dbData.date}
@@ -38,6 +40,7 @@ export const ListItems = (props)=>{
                     key = {dbData._id}
                 />) 
             })}
+            </div>
             
         </div>
     )
