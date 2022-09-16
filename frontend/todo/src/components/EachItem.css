@@ -11,5 +11,6 @@ button {
 
 h5{
     display: inline-flex;
-    padding: 5px
+    padding: 5px;
+    color: purple
 }

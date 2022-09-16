@@ -31,8 +31,7 @@ function App() {
   // }
   return (
     <div className="setDisplay">
-      <div>Things to do</div>
-      <br></br>
+      <div><h3><b>Event items for vehicle care</b></h3></div>
       <Input />
       <ListItems taskers={itemsList}/>
     </div>

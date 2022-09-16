@@ -30,11 +30,11 @@ export const Input = ()=>{
         <form onSubmit={submitHandler}>
         <div>
             <div>
-            <label>To do item</label>
+            <label>to do item -- </label>
             <input type="text" value={itemName} onChange={itemChangeHandler}></input>
             </div>
             <div>
-                <label>Due by</label>
+                <label>due by -- </label>
                 <input type="date" min='2022-09-01' max='2023-01-01' value={enteredDate} onChange={dateChangeHandler}></input>
             </div>
             <br></br>

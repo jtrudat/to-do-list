@@ -15,8 +15,8 @@ const deleteHandler = ()=>{
         <div>
             
             <div>
-                <h5>{props.todoItem}</h5>
-                <h5>{props.date}</h5>
+                <h5>☝️{props.todoItem}</h5>
+                <h5> -- with a due by date of {props.date}</h5>
                 <button onClick={editHandler}>Edit</button>
                 <button onClick={deleteHandler}>Delete</button>
             </div>

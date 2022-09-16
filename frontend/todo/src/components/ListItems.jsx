@@ -26,9 +26,7 @@ export const ListItems = (props)=>{
     return (
         <div>
             <br></br>
-            <br></br>
-            
-
+            <br></br>         
             <label id="listingSection">Consolidated list of items to do</label>
             <button onClick={refreshHandler}>refresh current listings</button>
             <div id="linerow">
