@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import axios from 'axios'
 
 export const Input = ()=>{
     let [itemName, setItemName] = useState('')
@@ -10,9 +11,11 @@ export const Input = ()=>{
             todoItem : itemName,
             date : enteredDate
         }
-        
+        axios.post('/todos', newItem)
+        setItemName('')
+        setEnteredDate('')
     }   
-
+    
     let itemChangeHandler = (evt)=>{
         setItemName(evt.target.value)
         console.log(evt.target.value)
@@ -36,9 +39,10 @@ export const Input = ()=>{
             </div>
             <br></br>
             <button type="submit">add the new item</button>
-
+            
             
         </div>
         </form>
+        
     )
 } 

@@ -12,6 +12,7 @@ router.post('/', (req, res)=>{
     new Item(createdItem)
     .save()
     res.status(201).json(createdItem)
+    console.log(createdItem)
 })
 
 //READ

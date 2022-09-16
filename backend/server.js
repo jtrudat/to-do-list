@@ -3,9 +3,11 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const app = express()
+const cors = require('cors')
 
 //MIDDLEWARE FOR ALL INCOMING TRAFFIC GOES THROUGH APP.USE PARAMETERS
 app.use(bodyParser.json())
+app.use(cors())
 
 //FORWARDING ALL TRAFFIC TO THE ROUTER CONTROLLER
 const router = require('./routes/item-route-controller')
