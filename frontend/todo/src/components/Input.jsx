@@ -14,6 +14,7 @@ export const Input = ()=>{
         axios.post('/todos', newItem)
         setItemName('')
         setEnteredDate('')
+        window.location.reload(true)
     }   
     
     let itemChangeHandler = (evt)=>{

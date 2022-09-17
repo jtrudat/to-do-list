@@ -23,6 +23,8 @@ export const ListItems = (props)=>{
         })
         console.log(allItems)
     }
+
+   
     return (
         <div>
             <br></br>
@@ -36,6 +38,8 @@ export const ListItems = (props)=>{
                     date = {dbData.date}
                     number = {dbData._id}
                     key = {dbData._id}
+                    onRefreshHandler = {refreshHandler}
+                   
                 />) 
             })}
             </div>
