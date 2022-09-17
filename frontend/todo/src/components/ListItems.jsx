@@ -26,6 +26,9 @@ export const ListItems = (props)=>{
 
    //<button onClick={refreshHandler}>refresh current listings</button>
    //onRefreshHandler = {refreshHandler}
+
+
+   //In the return all returned json responses are assigned with an Id by MongoDb and that is used as the unique key for each item
     return (
         <div>
             <br></br>

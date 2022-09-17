@@ -4,16 +4,24 @@ import axios from 'axios'
 
 
 export const EachItem = (props) =>{
- 
+
+//PUT - for updating the time and date of each listing
+// The unique key for each item is tied to the mongoId so the correct item is targeted    
 const dateEditHandler= (evt) =>{
     let mongoId = evt.target.id
-    let newDate = evt.target.date
+    let newDate = evt.target.value
     let editedDate = {
         date : newDate
     }
+    console.log(newDate)
+    console.log(mongoId)
     axios.put(`/todos/${mongoId}`, editedDate)
+    //*Temporary auto refresh*
     window.location.reload(true)
 }
+
+//DELETE - for removing the individual list item
+// The unique key for each item is tied to the mongoId so the correct item is targeted
 const deleteHandler = (evt)=>{
     let mongoId = evt.target.id
     axios.delete(`/todos/${mongoId}`)
@@ -21,6 +29,7 @@ const deleteHandler = (evt)=>{
     function refresh (){
         props.onRefreshHandler()
     }
+    //*Temporary auto refresh*
     window.location.reload(true)
 } 
 
