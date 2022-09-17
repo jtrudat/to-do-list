@@ -9,8 +9,13 @@ button {
     margin: 5px
 }
 
-h5{
+h6{
     display: inline-flex;
     padding: 5px;
     color: purple
+}
+
+.date{
+    width: 10px;
+    height: 12px
 }

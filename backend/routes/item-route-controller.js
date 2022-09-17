@@ -28,7 +28,7 @@ router.get('/', (req, res)=>{
 router.put('/:id', (req, res)=>{
     Item.findByIdAndUpdate(req.params.id, req.body)
     .then((updatedItem)=>{
-        console.log('item updated')
+        console.log('item updated', updatedItem)
         res.json(updatedItem)
     })
 })

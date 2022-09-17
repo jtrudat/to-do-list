@@ -5,10 +5,14 @@ import axios from 'axios'
 
 export const EachItem = (props) =>{
  
-const editHandler= (evt) =>{
+const dateEditHandler= (evt) =>{
     let mongoId = evt.target.id
-    console.log(mongoId)
-    //axios.put('/todos/${mongoId}')
+    let newDate = evt.target.date
+    let editedDate = {
+        date : newDate
+    }
+    axios.put(`/todos/${mongoId}`, editedDate)
+    window.location.reload(true)
 }
 const deleteHandler = (evt)=>{
     let mongoId = evt.target.id
@@ -25,9 +29,8 @@ const deleteHandler = (evt)=>{
         <div>
             
             <div>
-                <h5>☝️{props.todoItem}</h5>
-                <h5> -- with a due by date of {props.date}</h5>
-                <button id={props.number} onClick={editHandler}>Edit</button>
+                <input type="checkbox"></input><h6>☝️{props.todoItem}</h6>
+                <h6> -- to be done by {props.date}<input id={props.number} className="date" type="datetime-local" onChange={dateEditHandler}></input></h6>
                 <button id={props.number} onClick={deleteHandler}>Delete</button>
             </div>
         </div>

@@ -36,7 +36,7 @@ export const Input = ()=>{
             </div>
             <div>
                 <label>due by -- </label>
-                <input type="date" min='2022-09-01' max='2023-01-01' value={enteredDate} onChange={dateChangeHandler}></input>
+                <input className="inputdate" type="datetime-local" min='2022-09-01' max='2023-01-01' value={enteredDate} onChange={dateChangeHandler}></input>
             </div>
             <br></br>
             <button type="submit">add the new item</button>
