@@ -27,7 +27,6 @@ const deleteHandler = (evt)=>{
 
     return(
         <div>
-            
             <div>
                 <input type="checkbox"></input><h6>☝️{props.todoItem}</h6>
                 <h6> -- to be done by {props.date}<input id={props.number} className="date" type="datetime-local" onChange={dateEditHandler}></input></h6>
