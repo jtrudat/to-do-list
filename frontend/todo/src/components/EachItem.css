@@ -28,3 +28,8 @@ h6{
     border-style: dotted;
     background-color: rgba(93, 107, 116, 0.38)
 }
+
+.buttons{
+    border-radius: 20px;
+    background-color: rgb(195, 195, 234)
+}

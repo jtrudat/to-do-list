@@ -65,8 +65,8 @@ const deleteHandler = (evt)=>{
                 <input type="checkbox"></input>
                 <h6 id={props.number} onClick={descriptionHandler}><b>{props.todoItem}</b></h6>
                 <h6><b>/ due by {props.date}<input id={props.number} className="date" type="datetime-local" onChange={dateEditHandler}></input></b></h6>
-                <button id={props.number} onClick={editHandler}>edit</button>
-                <button id={props.number} onClick={deleteHandler}>Delete</button>
+                <button id={props.number} onClick={editHandler} className="buttons">edit</button>
+                <button id={props.number} onClick={deleteHandler} className="buttons">Delete</button>
             </div>
         </div>
     )
