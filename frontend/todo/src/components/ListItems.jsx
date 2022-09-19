@@ -6,6 +6,9 @@ import './ListItems.css'
 
 export const ListItems = (props)=>{
     const [ allItems, setAllItems ] = useState(props.taskers)
+    
+    //WILL CALL UP THE LATEST DATABASE SNAPSHOT AFTER ALL FUNCTIONS ARE PERFORMED
+    //SPECIFICALLY - THE DATA PORTION OF THE RESPONSE CONTAINS THE OBJECTS TO BE MAPPED AND LISTED
     useEffect(()=>{
         axios.get('/todos')
         .then((response)=>{

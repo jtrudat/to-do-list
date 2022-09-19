@@ -4,6 +4,9 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const app = express()
 const cors = require('cors')
+require('dotenv').config()
+const PORT = process.env.PORT
+const MONGO_URI = process.env.MONGO_URI
 
 //MIDDLEWARE FOR ALL INCOMING TRAFFIC GOES THROUGH APP.USE PARAMETERS
 app.use(bodyParser.json())
@@ -20,8 +23,8 @@ app.use('/*', (req, res)=>{
 } )
 
 //ATLAS DATABASE CONNECTION AND SERVER PORT
-mongoose.connect('mongodb+srv://trudat:passwordpassword@cluster0.5rud2jy.mongodb.net/todolist?retryWrites=true&w=majority')
+mongoose.connect(MONGO_URI)
 .then(()=>{
-    app.listen(4001)
-    console.log('mongodb connected on atlas and server listening on 4001')
+    app.listen(PORT)
+    console.log(`mongodb connected on atlas and server listening on ${PORT}`)
 })
