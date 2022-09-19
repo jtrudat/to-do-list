@@ -13,6 +13,11 @@ app.use(cors())
 const router = require('./routes/item-route-controller')
 app.use('/todos', router)
 
+//Errors
+app.use('/*', (req, res)=>{
+    res.send('<h1><b>sorry item not found</b></h1><a href="http://localhost:3000"><button>redirect to listings</button></a>')
+    console.log('not routed, no item')
+} )
 
 //ATLAS DATABASE CONNECTION AND SERVER PORT
 mongoose.connect('mongodb+srv://trudat:passwordpassword@cluster0.5rud2jy.mongodb.net/todolist?retryWrites=true&w=majority')

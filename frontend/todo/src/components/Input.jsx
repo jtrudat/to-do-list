@@ -32,7 +32,7 @@ export const Input = ()=>{
         <div>
             <div>
             <label>to do item -- </label>
-            <input type="text" value={itemName} onChange={itemChangeHandler}></input>
+            <input type="text" maxLength="23" size="24" value={itemName} onChange={itemChangeHandler}></input>
             </div>
             <div>
                 <label>due by -- </label>

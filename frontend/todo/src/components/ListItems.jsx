@@ -16,13 +16,11 @@ export const ListItems = (props)=>{
         
     },[])
 
-    // let refreshHandler = ()=>{
-    //     axios.get('/todos')
-    //     .then((response)=>{
-    //         setAllItems(response.data)
-    //     })
-    //     console.log(allItems)
+    // let refreshHandler = (response)=>{
+    //    setAllItems(response)
+    //    console.log(allItems)
     // }
+    // onRefresh={refreshHandler} 
 
    //<button onClick={refreshHandler}>refresh current listings</button>
    //onRefreshHandler = {refreshHandler}
@@ -32,7 +30,7 @@ export const ListItems = (props)=>{
     return (
         <div>
             <br></br>
-            <br></br>         
+                    
             <label id="listingSection">Consolidated list of items to do</label>
             <div id="linerow">
                 {allItems.map((dbData)=>{
@@ -40,7 +38,8 @@ export const ListItems = (props)=>{
                     todoItem = {dbData.todoItem}
                     date = {dbData.date}
                     number = {dbData._id}
-                    key = {dbData._id}               
+                    key = {dbData._id}
+                                  
                 />) 
             })}
             </div>

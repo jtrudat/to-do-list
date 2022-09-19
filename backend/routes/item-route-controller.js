@@ -24,6 +24,18 @@ router.get('/', (req, res)=>{
     })
 })
 
+//READ SINGLE ITEM
+router.get('/:id', (req, res)=>{
+    Item.findById(req.params.id)
+        .then((singleItem)=>{
+        res.json(singleItem)
+    })
+    .catch(err =>{
+        res.send('<h1><b>sorry item not found</b></h1><a href="http://localhost:3000"><button>redirect to listings</button></a>')
+        console.log('no good server route')
+    } )
+})
+
 //UPDATE
 router.put('/:id', (req, res)=>{
     Item.findByIdAndUpdate(req.params.id, req.body)
@@ -41,6 +53,12 @@ router.delete('/:id', (req, res)=>{
         res.json(deletedItem)
     })
 })
+
+//Errors
+router.get('/*', (req, res)=>{
+    res.send('<h1><b>sorry item not found</b></h1><a href="http://localhost:3000"><button>redirect to listings</button></a>')
+    console.log('no good server route')
+} )
 
 //EXPORT
 module.exports = router
