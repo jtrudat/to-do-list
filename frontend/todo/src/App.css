@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.setDisplay{
+      text-align: center;
+      
+}
+
+div {
+  background-color: rgb(147, 183, 185);
+}
