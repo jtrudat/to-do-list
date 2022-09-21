@@ -1,17 +1,13 @@
 # MERN-ToDo
 
-<<<<<<< HEAD
-Mern-Todo is a quick on the go checklist application that allows a user’s to quickly reference and maintain awareness on their respective todo and set a date. The todos are saved/fetched on/from a server to the database. 
-=======
-Mern-todo is a todo app that allows a user’s can create, read, edit, and update their todo and set a date. The todos are saved/fetched on/from a server to the database. 
->>>>>>> 861b45b233497531d85881d9345eddb826bb94e9
+Mern-Todo is a quick on the go checklist application that allows a user to quickly reference and maintain awareness on their respective things to do for a respective tme period. The todos are saved to and recalled from a database via server. Inspiration for this design is from the mobile checklists used on a daily basis 
 
 
-## Built with
 
-- React JS
-- MongoDB for database
-- Express and Node JS
+## Tech stack consistening of
+Frontend: React JS framework
+
+Backend: MongoDB for databasing & Node Express framework for API server
 
 
 ## Live demo link
@@ -24,9 +20,11 @@ Mern-todo is a todo app that allows a user’s can create, read, edit, and updat
 
 - Have Node installed on your machine.
 
--  Install the following dependencies 
-      1. npm install cors, nodemon, express, mongoose (Backend)
-      2. npm install axios (Frontend/todo)
+-  Install the following dependencies
+    Frontend:
+      1. npm install axios
+    Backend: 
+      1. npm install cors, nodemon, express, mongoose, dotenv
 
 
 ### Setting up instructions
@@ -37,11 +35,7 @@ Mern-todo is a todo app that allows a user’s can create, read, edit, and updat
 
 - clone this repo
 
-<<<<<<< HEAD
 # cd frontend-todo (for frontend part)
-=======
-# cd frontend-todo ( frontend part)
->>>>>>> 861b45b233497531d85881d9345eddb826bb94e9
 
 - npm install
 
@@ -49,11 +43,7 @@ Mern-todo is a todo app that allows a user’s can create, read, edit, and updat
 
 - localhost:3000 to see the live locally
  
-<<<<<<< HEAD
 # cd backend (for backend part)
-=======
-# cd backend (backend part)
->>>>>>> 861b45b233497531d85881d9345eddb826bb94e9
 
 - npm install
 
