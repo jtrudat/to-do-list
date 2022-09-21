@@ -1,8 +1,9 @@
 #listingSection{
-    padding: 5px;
+    padding: 3px;
     font-size: 17px;
     border-style:double;
     background-color: rgb(193, 183, 183);
     border-radius: 20px;
+    font-weight:bold
 }
 

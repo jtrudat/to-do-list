@@ -4,32 +4,39 @@
 }
 
 button {
-    padding: 5px;
+    padding: 2px;
     display: inline;
-    margin: 3px;
+    margin: 2px;
     font-size: 10px
 }
 
 h6{
     display: inline-flex;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    color: purple;
-    font-size: 10.5px;
+    
+    color: rgb(113, 25, 113);
+    font-size: 11px;
 }
 
 .date{
     width: 16px;
-    height: 14px
+    height: 14px;
+    background-color: rgb(166, 158, 158)
 }
 
 .each-item{
     border-color: black;
     border-style: dotted;
-    background-color: rgba(93, 107, 116, 0.38)
+    background-color: rgba(44, 112, 155, 0.38)
 }
 
 .buttons{
     border-radius: 20px;
-    background-color: rgb(195, 195, 234)
+    background-color: rgb(195, 195, 234);
+    font-size: 7.5px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+}
+
+.checkbox{
+    border-radius: 10px
 }
