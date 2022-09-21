@@ -1,6 +1,8 @@
 # MERN-ToDo
 
-Mern-Todo is a quick on the go checklist application that allows a user to quickly reference and maintain awareness on their respective things to do for a respective tme period. The todos are saved to and recalled from a database via server. Inspiration for this design is from the mobile checklists used on a daily basis 
+Mern-Todo is a quick on the go checklist application that allows a user to quickly reference and maintain awareness on their respective things to do for a respective tme period. The todos are saved to and recalled from a database via server. Inspiration for this design is based on quickly accessible mobile checklists (often used with one hand in fast paced real time environments)
+
+Button placement, visibility and attention focus were all considerations to make this a reliable product
 
 
 
