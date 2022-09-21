@@ -2,7 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import './Input.css'
 
-export const Input = ()=>{
+export const Input = (props)=>{
     let [itemName, setItemName] = useState('')
     let [enteredDate, setEnteredDate] = useState('')
 
@@ -17,8 +17,9 @@ export const Input = ()=>{
         axios.post('/todos', newItem)
         setItemName('')
         setEnteredDate('')
-        window.location.reload(true)
-    }   
+        //window.location.reload(true)
+        props.onRefresh()
+        }   
     
     //SETS THE STATE FOR THE DESIRED ITEM TASKER TO BE ENTERED INTO THE DATABASE
     let itemChangeHandler = (evt)=>{

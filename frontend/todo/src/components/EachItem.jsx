@@ -5,11 +5,8 @@ import { FaTrashAlt } from 'react-icons/fa'
 import { FaEraser } from 'react-icons/fa'
 
 
-
 export const EachItem = (props) =>{
 const [ newDate, setNewDate ] = useState()
-    
-    
 
 //PUT - for updating the time and date of each listing
 // The unique key for each item is tied to the mongoId so the correct item is targeted    
@@ -36,7 +33,7 @@ const deleteHandler = (evt)=>{
     let mongoId = evt.target.id
     axios.delete(`/todos/${mongoId}`)
     console.log(mongoId)
-    props.onRefresh()  
+    props.onRefresh() 
 } 
 
 
