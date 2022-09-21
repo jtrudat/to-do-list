@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import axios from 'axios'
+import './Input.css'
 
 export const Input = ()=>{
     let [itemName, setItemName] = useState('')
     let [enteredDate, setEnteredDate] = useState('')
 
+    //ASSIGNS THE NEWLY INPUT DATA TO AN OBJECT. 
+    //THE OBJECT IS THEN ROUTED INTO THE ITEM MODEL ON THE SERVER AND THEN POSTED TO THE COLLECTIONS MODEL
     let submitHandler = (evt)=>{
         evt.preventDefault()
         let newItem = {
@@ -17,11 +20,13 @@ export const Input = ()=>{
         window.location.reload(true)
     }   
     
+    //SETS THE STATE FOR THE DESIRED ITEM TASKER TO BE ENTERED INTO THE DATABASE
     let itemChangeHandler = (evt)=>{
         setItemName(evt.target.value)
         console.log(evt.target.value)
     }
 
+    //SETS THE STATE FOR THE DESIRED ITEM TASKER DATE TO BE ENTERED INTO THE DATABASE
     let dateChangeHandler = (evt)=>{
         setEnteredDate(evt.target.value)
         console.log(evt.target.value)
@@ -31,17 +36,14 @@ export const Input = ()=>{
         <form onSubmit={submitHandler}>
         <div>
             <div>
-            <label>to do item -- </label>
-            <input type="text" maxLength="23" size="24" value={itemName} onChange={itemChangeHandler}></input>
+            <label>to do item 👉 </label>
+            <input className="inner" type="text" maxLength="21" size="24" value={itemName} onChange={itemChangeHandler}></input>
             </div>
             <div>
-                <label>due by -- </label>
+                <label>due by 👉 </label>
                 <input className="inputdate" type="datetime-local" min='2022-09-01' max='2023-01-01' value={enteredDate} onChange={dateChangeHandler}></input>
-            </div>
-            <br></br>
-            <button type="submit">add the new item</button>
-            
-            
+            <button className="submitter" type="submit">➕add 📝➕</button>
+            </div>   
         </div>
         </form>
         

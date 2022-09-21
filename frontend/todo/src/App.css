@@ -43,5 +43,43 @@
 }
 
 div {
-  background-color: rgb(147, 183, 185);
+  background-color: rgb(150, 180, 182);
+}
+
+.sidecar{
+  color: rgb(0, 255, 72);
+  animation: tilt-shaking .5s infinite;
+  font-size: 25px
+}
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.battery{
+  color: rgb(231, 50, 18);
+  animation: tilt-n-move-shaking 1.5s infinite alternate, fadeIn 1s infinite alternate;
+  font-size: 20px;
+   
+}
+@keyframes tilt-n-move-shaking {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+
+
+@keyframes fadeIn { 
+  from { opacity : 0.25; }
+  to {opacity : 100;} 
+}
+
+h3{
+  text-shadow: 2px 2px 5px rgb(223, 237, 21)
 }
