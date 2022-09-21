@@ -3,7 +3,7 @@ import axios from 'axios'
 import './Input.css'
 
 export const Input = (props)=>{
-    let [itemName, setItemName] = useState('')
+    let [itemName, setItemName] = useState('list me here please')
     let [enteredDate, setEnteredDate] = useState('')
 
     //ASSIGNS THE NEWLY INPUT DATA TO AN OBJECT. 
