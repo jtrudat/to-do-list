@@ -37,13 +37,14 @@ export const Input = (props)=>{
         <form onSubmit={submitHandler}>
         <div>
             <div>
-            <label>to do item 👉 </label>
+            <label>To Do Item 👉 </label>
             <input className="inner" type="text" maxLength="21" size="24" value={itemName} onChange={itemChangeHandler}></input>
             </div>
+            <br></br>
             <div>
-                <label>due by 👉 </label>
+                <label>Due by 👉 </label>
                 <input className="inputdate" type="datetime-local" min='2022-09-01' max='2023-01-01' value={enteredDate} onChange={dateChangeHandler}></input>
-            <button className="submitter" type="submit">➕add 📝➕</button>
+            <button className="submitter" type="submit">Add 📝</button>
             </div>   
         </div>
         </form>
