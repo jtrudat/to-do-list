@@ -3,7 +3,7 @@ import axios from 'axios'
 import './Input.css'
 
 export const Input = (props)=>{
-    let [itemName, setItemName] = useState('list me here please')
+    let [itemName, setItemName] = useState('')
     let [enteredDate, setEnteredDate] = useState('')
 
     //ASSIGNS THE NEWLY INPUT DATA TO AN OBJECT. 
@@ -38,7 +38,7 @@ export const Input = (props)=>{
         <div>
             <div>
             <label>To Do Item 👉 </label>
-            <input className="inner" type="text" maxLength="21" size="24" value={itemName} onChange={itemChangeHandler}></input>
+            <input className="inner" type="text" maxLength="21" size="24" value={itemName} placeHolder="list your item here" onChange={itemChangeHandler}></input>
             </div>
             <br></br>
             <div>
