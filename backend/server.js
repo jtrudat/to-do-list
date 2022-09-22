@@ -8,6 +8,9 @@ require('dotenv').config()
 const PORT = process.env.PORT
 const MONGO_URI = process.env.MONGO_URI
 
+// Have Node serve the files for our built React app
+app.use(express.static(path.resolve(__dirname, '../frontend/todo/build')))
+
 //MIDDLEWARE FOR ALL INCOMING TRAFFIC GOES THROUGH APP.USE PARAMETERS
 app.use(bodyParser.json())
 app.use(cors())

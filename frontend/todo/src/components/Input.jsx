@@ -43,7 +43,7 @@ export const Input = (props)=>{
             <div>
                 <label>due by 👉 </label>
                 <input className="inputdate" type="datetime-local" min='2022-09-01' max='2023-01-01' value={enteredDate} onChange={dateChangeHandler}></input>
-            <button className="submitter" type="submit">➕add 📝➕</button>
+            <button className="submitter" type="submit">add 📝</button>
             </div>   
         </div>
         </form>
