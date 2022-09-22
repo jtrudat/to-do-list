@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './EachItem.css'
 import axios from 'axios'
 import { FaTrashAlt } from 'react-icons/fa'
-import { FaEraser } from 'react-icons/fa'
+import { FaEdit } from 'react-icons/fa'
 
 
 export const EachItem = (props) =>{
@@ -42,8 +42,8 @@ const deleteHandler = (evt)=>{
             <div className="each-item">
                 <input className="checkbox" type="checkbox"></input>
                 <h6 id={props.number}><b>{props.todoItem}</b></h6>
-                <h6><b>＠ {props.date}<input id={props.number} className="date" type="datetime-local" onChange={dateEditHandler}></input></b></h6>
-                <button id={props.number} onClick={editHandler} className="buttons"><FaEraser id={props.number} onClick={editHandler}/>EDIT</button>
+                <h6><b>＠ {props.date} <input id={props.number} className="date" type="datetime-local" onChange={dateEditHandler}></input></b></h6>
+                <button id={props.number} onClick={editHandler} className="buttons"><FaEdit id={props.number} onClick={editHandler}/>Edit</button>
                 <button id={props.number} onClick={deleteHandler} className="buttons"><FaTrashAlt id={props.number} onClick={deleteHandler}/> ❌</button>
             </div>
         </div>
