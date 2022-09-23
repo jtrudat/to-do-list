@@ -2,7 +2,7 @@
 
 Mern-Todo is a quick on the go checklist application that allows a user to quickly reference and maintain awareness on their respective things to do for a respective tme period. The todos are saved to and recalled from a database via server. Inspiration for this design is from the mobile checklists used on a daily basis 
 
-## Tech stack consistening of
+## Tech stack consisting of
 Frontend: React JS framework
 
 Backend: MongoDB for databasing & Node Express framework for API server
