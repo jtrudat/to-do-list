@@ -10,7 +10,7 @@ require('dotenv').config()
 const PORT = process.env.PORT
 const MONGO_URI = process.env.MONGO_URI
 
-// FOR FRONTEND DEPLOY Have Node serve the files for our built React app
+// FOR FRONTEND DEPLOYMENT ONLY Have Node serve the files for the built React app
     //const path = require('path')
     //app.use(express.static(path.resolve(__dirname, '../frontend/todo/build')))
     
