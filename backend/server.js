@@ -1,20 +1,25 @@
-//DEPENDENCIES - ENSURE NODEMON/EXPRESS/MONGOOSE INSTALLED
-const express = require('express')
-const bodyParser = require('body-parser')
+//Dependencies
+const express = require('express');
 const mongoose = require('mongoose')
-const app = express()
-const cors = require('cors')
+const cors = require("cors")
+
+
+//Configuration
 require('dotenv').config()
-const PORT = process.env.PORT
-const MONGO_URI = process.env.MONGO_URI
+const app = express();
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true },
+    () => { console.log('connected to mongo: ', process.env.MONGO_URI) }
+)
 
-//MIDDLEWARE FOR ALL INCOMING TRAFFIC GOES THROUGH APP.USE PARAMETERS
-app.use(bodyParser.json())
-app.use(cors())
+//Initialize middleware
+app.use(express.json({ extended: false }));
+app.use(cors({ origin: true, credentials: true }));
 
-//FORWARDING ALL TRAFFIC TO THE ROUTER CONTROLLER
+//Routes
+app.get('/', (req, res) => res.send("Hello from server"))
 const router = require('./routes/item-route-controller')
-app.use('/todos', router)
+app.use('/todos', router);
+
 
 //Errors
 app.use('/*', (req, res)=>{
@@ -22,9 +27,10 @@ app.use('/*', (req, res)=>{
     console.log('not routed, no item')
 } )
 
-//ATLAS DATABASE CONNECTION AND SERVER PORT
-mongoose.connect(MONGO_URI)
-.then(()=>{
-    app.listen(PORT)
-    console.log(`mongodb connected on atlas and server listening on ${PORT}`)
-})
+
+// setting up port
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+    console.log(`server is running on http://localhost:${PORT}`);
+});

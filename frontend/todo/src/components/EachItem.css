@@ -1,35 +1,47 @@
 #lineitem {
     display: inline
-   
 }
 
 button {
-    padding: 5px;
+    padding: 2px;
     display: inline;
-    margin: 3px;
+    margin: 2px;
     font-size: 10px
 }
 
 h6{
     display: inline-flex;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    color: purple;
-    font-size: 10.5px;
+    color: rgb(11, 11, 11);
+    font-size: 11px;
 }
 
 .date{
     width: 16px;
-    height: 14px
+    height: 14px;
+    margin-right: 10px;
+    background-color:  hsl(242deg 58% 81%);
 }
 
 .each-item{
     border-color: black;
-    border-style: dotted;
-    background-color: rgba(93, 107, 116, 0.38)
+    border-style:hidden;
+    background-color: rgba(202, 225, 243, 0.995);
+    box-shadow: inset -4px -4px 3px rgba(43, 30, 30, 0.724)
 }
 
 .buttons{
     border-radius: 20px;
-    background-color: rgb(195, 195, 234)
+    background-color: rgb(195, 195, 234);
+    font-size: 7.5px;
+    padding-right: 3px;
+    margin-right: 5px;
+    padding-bottom: 4px;
+    box-shadow: inset -4px -4px 3px rgba(9, 21, 123, 0.724)
+}
+
+.checkbox{
+    border-radius: 10px;
+    position: relative;
+    margin: 0px 5px;
+    top: 3px;
 }
