@@ -4,13 +4,16 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const app = express()
 const cors = require('cors')
+
+//Configuration - PORTS and Server
 require('dotenv').config()
 const PORT = process.env.PORT
 const MONGO_URI = process.env.MONGO_URI
-//const path = require('path')
 
 // FOR FRONTEND DEPLOY Have Node serve the files for our built React app
-//app.use(express.static(path.resolve(__dirname, '../frontend/todo/build')))
+    //const path = require('path')
+    //app.use(express.static(path.resolve(__dirname, '../frontend/todo/build')))
+    
 
 //MIDDLEWARE FOR ALL INCOMING TRAFFIC GOES THROUGH APP.USE PARAMETERS
 app.use(bodyParser.json())
@@ -22,12 +25,12 @@ app.use('/todos', router)
 
 //Errors
 app.use('/*', (req, res)=>{
-    res.send('<h1><b>sorry item not found</b></h1><a href="http://localhost:3000"><button>redirect to listings</button></a>')
+    res.send(`<h1><b>sorry item not found</b></h1><a href="http://localhost:${PORT}/todos"><button>⬅️redirect to listings</button></a>`)
     console.log('not routed, no item')
 } )
 
-//ATLAS DATABASE CONNECTION AND SERVER PORT
-mongoose.connect(MONGO_URI)
+//BACKEND DATABASE CONNECTION AND PORT LISTENING
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(()=>{
     app.listen(PORT)
     console.log(`mongodb connected on atlas and server listening on ${PORT}`)

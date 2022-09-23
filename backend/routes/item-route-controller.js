@@ -2,6 +2,7 @@
 const express = require('express')
 const router = express.Router()
 const Item = require('../models/item.js')
+const PORT = process.env.PORT
 
 //CREATE
 router.post('/', (req, res)=>{
@@ -31,7 +32,7 @@ router.get('/:id', (req, res)=>{
         res.json(singleItem)
     })
     .catch(err =>{
-        res.send('<h1><b>sorry item not found</b></h1><a href="http://localhost:3000"><button>⬅️redirect back to listings</button></a>')
+        res.send(`<h1><b>sorry item not found</b></h1><a href="http://localhost:3000"><button>⬅️redirect back to listings</button></a>`)
         console.log('no good server route')
     } )
 })
@@ -56,7 +57,7 @@ router.delete('/:id', (req, res)=>{
 
 //Errors
 router.get('/*', (req, res)=>{
-    res.send('<h1><b>sorry item not found</b></h1><a href="http://localhost:3000"><button>redirect to listings</button></a>')
+    res.send(`<h1><b>sorry item not found</b></h1><a href="http://localhost:${PORT}"><button>⬅️redirect to listings</button></a>`)
     console.log('no good server route')
 } )
 
