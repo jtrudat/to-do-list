@@ -1,49 +1,12 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .setDisplay{
-      text-align: center;
-      
+      text-align: center;   
 }
 
 div {
   background-color: rgba(123, 189, 242, 0.995);
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
 .sidecar{
@@ -51,6 +14,7 @@ div {
   animation: tilt-shaking .5s infinite;
   font-size: 25px
 }
+
 @keyframes tilt-shaking {
   0% { transform: rotate(0deg); }
   25% { transform: rotate(5deg); }
@@ -65,6 +29,7 @@ div {
   font-size: 20px;
    
 }
+
 @keyframes tilt-n-move-shaking {
   0% { transform: translate(0, 0) rotate(0deg); }
   25% { transform: translate(5px, 5px) rotate(5deg); }
@@ -72,8 +37,6 @@ div {
   75% { transform: translate(-5px, 5px) rotate(-5deg); }
   100% { transform: translate(0, 0) rotate(0deg); }
 }
-
-
 
 @keyframes fadeIn { 
   from { opacity : 0.25; }
