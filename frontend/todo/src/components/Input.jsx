@@ -9,7 +9,7 @@ export const Input = (props)=>{
     //ASSIGNS THE NEWLY INPUT DATA TO AN OBJECT. 
     //THE OBJECT IS THEN ROUTED INTO THE ITEM MODEL ON THE SERVER AND THEN POSTED TO THE COLLECTIONS MODEL
     let handleSubmit = (evt)=>{
-        evt.preventDefault()
+        //evt.preventDefault()
         let newItem = {
             todoItem : item,
             date : date
@@ -33,17 +33,17 @@ export const Input = (props)=>{
     }
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form>
         <div>
             <div>
             <label>To Do Item 👉 </label>
-            <input className="inner" type="text" maxLength="19" size="24" value={item} placeHolder="list your item here" onChange={handleItemChange}></input>
+            <input className="inner" type="text" maxLength="19" size="24" value={item} placeholder="list your item here" onChange={handleItemChange}></input>
             </div>
             <br></br>
             <div>
                 <label>Due by 👉 </label>
                 <input className="inputdate" type="datetime-local" min='2022-09-01' max='2023-01-01' value={date} onChange={handleDateChange}></input>
-            <button className="submitter" type="submit">Add 📝</button>
+            <button className="submitter" onClick={handleSubmit}>Add 📝</button>
             </div>   
         </div>
         </form>
