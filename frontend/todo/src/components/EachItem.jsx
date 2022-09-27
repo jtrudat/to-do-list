@@ -42,7 +42,7 @@ const handleDelete = (evt)=>{
             <div className="each-item">
                 <input className="checkbox" type="checkbox"></input>
                 <h6 id={props.number}><b>{props.todoItem}</b></h6>
-                <h6><b>＠ {props.date} <input id={props.number} className="date" type="datetime-local" onChange={handleDateEdit}></input></b></h6>
+                <h6><b>＠ {props.date.slice(5, 10)}_{props.date.slice(11, 16)}<input id={props.number} className="date" type="datetime-local" onChange={handleDateEdit}></input></b></h6>
                 <button id={props.number} onClick={handleEdit} className="buttons"><FaEdit id={props.number} onClick={handleEdit}/>Edit</button>
                 <button id={props.number} onClick={handleDelete} className="buttons"><FaTrashAlt id={props.number} onClick={handleDelete}/> ❌</button>
             </div>
