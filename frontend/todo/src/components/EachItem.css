@@ -17,9 +17,11 @@ h6{
 }
 
 .date{
+    
     width: 16px;
     height: 14px;
     margin-right: 10px;
+    margin-left: 7.5px;
     background-color: rgb(166, 158, 158)
 }
 
@@ -45,4 +47,9 @@ h6{
     position: relative;
     margin: 0px 5px;
     top: 3px;
+}
+
+.column-set{
+    display: block;
+    margin-left: 5px
 }
