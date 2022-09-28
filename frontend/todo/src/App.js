@@ -33,7 +33,7 @@ function App() {
 //LISTITEMS IS PASSED THE TASKERS PROPERTY WHICH CONTAINS THE INTERNALLY STORED DUMMY DATA.  
   return (
     <div className="setDisplay">
-      <div><h3><b><FaCarSide className="sidecar"/>- Taskers & To-do's quicksheet - <FaRunning className="battery"/></b></h3></div>
+      <div><h3><b><FaCarSide className="sidecar"/> - Taskers & To-do's quicksheet - <FaRunning className="battery"/></b></h3></div>
       <ListItems taskers={itemsList}/>
     </div>
   );
