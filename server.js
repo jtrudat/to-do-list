@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const app = express()
 const cors = require('cors')
+const path = require('path')
 
 //Configuration - PORTS and Server
 require('dotenv').config()
@@ -11,8 +12,7 @@ const PORT = process.env.PORT
 const MONGO_URI = process.env.MONGO_URI
 
 // FOR FRONTEND DEPLOYMENT ONLY Have Node serve the files for the built React app
-    //const path = require('path')
-    //app.use(express.static(path.resolve(__dirname, './frontend/todo/build')))
+    app.use(express.static(path.resolve(__dirname, './frontend/todo/build')))
     
 
 //MIDDLEWARE FOR ALL INCOMING TRAFFIC GOES THROUGH APP.USE PARAMETERS
