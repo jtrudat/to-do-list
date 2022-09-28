@@ -36,8 +36,8 @@ export const Input = (props)=>{
         <form>
         <div>
             <div>
-            <label>To Do Item 👉 </label>
-            <input className="inner" type="text" maxLength="31" size="26" value={item} placeholder="list your item here" onChange={handleItemChange}></input>
+            <label>Task Item : </label>
+            <input className="inner" type="text" maxLength="31" size="27" value={item} placeholder="list your item here" onChange={handleItemChange}></input>
             </div>
             <br></br>
             <div>
