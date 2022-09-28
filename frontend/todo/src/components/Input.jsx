@@ -36,12 +36,12 @@ export const Input = (props)=>{
         <form>
         <div>
             <div>
-            <label>Task 👉 </label>
+            <label>Task : 👉 </label>
             <input className="inner" type="text" maxLength="31" size="28" value={item} placeholder="Enter your item here" onChange={handleItemChange}></input>
             </div>
             <br></br>
             <div>
-                <label>Due by 👉 </label>
+                <label>Due by : 👉 </label>
                 <input className="inputdate" type="datetime-local" min='2022-09-01' max='2023-01-01' value={date} onChange={handleDateChange}></input>
             <button className="submitter" onClick={handleSubmit}>Add 📝</button>
             </div>   
