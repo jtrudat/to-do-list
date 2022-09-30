@@ -33,7 +33,6 @@ export const ListItems = (props)=>{
     return (
         <div>
             <Input onRefresh={refreshHandler}/>
-            <br></br>
             <label id="listingSection" onClick={refreshHandler}>Consolidated Task & To do list</label>
             <div id="linerow">
                 {allItems.map((dbData)=>{

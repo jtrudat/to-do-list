@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import axios from 'axios'
 import './Input.css'
+import { FormControlLabel, Switch, Collapse } from '@mui/material'
 
 export const Input = (props)=>{
     let [item, setItem] = useState('')
     let [date, setDate] = useState('')
+    let [isChecked, setIsChecked] = useState(false)
 
     //ASSIGNS THE NEWLY INPUT DATA TO AN OBJECT. 
     //THE OBJECT IS THEN ROUTED INTO THE ITEM MODEL ON THE SERVER AND THEN POSTED TO THE COLLECTIONS MODEL
@@ -31,10 +33,16 @@ export const Input = (props)=>{
         setDate(evt.target.value)
         console.log(evt.target.value)
     }
+    let switcher = ()=>{
+        setIsChecked((prev)=>(!prev))}
 
     return(
         <form>
-        <div>
+            <FormControlLabel
+        control={<Switch checked={isChecked} onChange={switcher} />}
+        label=<h5> Slide to enter a new item ✏️</h5>
+        />
+        <Collapse in={isChecked}>
             <div>
             <label>Task : 👉 </label>
             <input className="inner" type="text" maxLength="31" size="28" value={item} placeholder="Enter your item here" onChange={handleItemChange}></input>
@@ -45,7 +53,8 @@ export const Input = (props)=>{
                 <input className="inputdate" type="datetime-local" min='2022-09-01' max='2023-01-01' value={date} onChange={handleDateChange}></input>
             <button className="submitter" onClick={handleSubmit}>Add 📝</button>
             </div>   
-        </div>
+            <br></br>
+        </Collapse>
         </form>
         
     )
