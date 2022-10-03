@@ -9,7 +9,7 @@ Backend: MongoDB for databasing & Node Express framework for API server
 
 ## Live demo link
 
-[Mern-Todo](https://taskquick.herokuapp.com)
+[Mern-Todo](https://phonynotes.herokuapp.com)
 
 ## How to use this app locally?
 
@@ -18,10 +18,8 @@ Backend: MongoDB for databasing & Node Express framework for API server
 - Have Node installed on your machine.
 
 -  Install the following dependencies
-    Frontend:
-      1. npm install axios
-    Backend: 
-      1. npm install cors, nodemon, express, mongoose, dotenv
+    Frontend and Backend:
+      1. Run npm install within root folder TO-DO-LIST and within frontend/todo
 
 
 ### Setting up instructions

@@ -6,7 +6,7 @@ import { FormControlLabel, Switch, Collapse } from '@mui/material'
 export const Input = (props)=>{
     let [item, setItem] = useState('')
     let [date, setDate] = useState('')
-    let [isChecked, setIsChecked] = useState(false)
+    let [isToggled, setIsToggled] = useState(false)
 
     //ASSIGNS THE NEWLY INPUT DATA TO AN OBJECT. 
     //THE OBJECT IS THEN ROUTED INTO THE ITEM MODEL ON THE SERVER AND THEN POSTED TO THE COLLECTIONS MODEL
@@ -33,16 +33,15 @@ export const Input = (props)=>{
         setDate(evt.target.value)
         console.log(evt.target.value)
     }
-    let switcher = ()=>{
-        setIsChecked((prev)=>(!prev))}
+    let toggler = ()=>{
+        setIsToggled((prev)=>(!prev))}
 
     return(
         <form>
-            <FormControlLabel
-        control={<Switch checked={isChecked} onChange={switcher} />}
-        label=<h5> Slide to enter a new item ✏️</h5>
-        />
-        <Collapse in={isChecked}>
+            <FormControlLabel label=<h5> Slide to enter a new item ✏️</h5>
+            control={<Switch checked={isToggled}  onClick={toggler}/>}
+            />
+        <Collapse in={isToggled}>
             <div>
             <label>Task : 👉 </label>
             <input className="inner" type="text" maxLength="31" size="28" value={item} placeholder="Enter your item here" onChange={handleItemChange}></input>
